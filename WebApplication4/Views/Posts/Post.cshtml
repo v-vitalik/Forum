@@ -1,0 +1,67 @@
+@model WebApplication4.Models.BigModel
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+@{
+    ViewData["Title"] = "Post";
+}
+<h1>@Html.DisplayFor(model => model.post.Title)</h1>
+<hr />
+<div>
+        <div class="post-description-block">   
+            <h2 class="post-description-block__title">
+                @Html.DisplayFor(model => model.post.Text)
+            </h2>
+            <p>Asked @Html.DisplayFor(model => model.post.Created)</p>
+            <p>By @Html.DisplayFor(model => model.post.Author)</p>
+        </div>
+
+</div>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Comments
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.post.Comments != null)
+        {
+            foreach (var item in Model.post.Comments)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.ApplicationUserName)
+                        @Html.DisplayFor(modelItem => item.Created) 
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Text)
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<hr/>
+@if (SignInManager.IsSignedIn(User))
+{
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <div class="comments-block">
+            <h2>Add Comment</h2>
+            <textarea class="text-area-control" asp-for="comment.Text"></textarea>
+            <input class="comments-block__button btn btn-primary" type="submit" onclick="" value="Add" />
+        </div>
+
+    }
+} else
+{
+    <h3>You need to log in to leave comments</h3>
+}

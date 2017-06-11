@@ -1,0 +1,52 @@
+@model IEnumerable<WebApplication4.Models.Post>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="navigation-block">
+        <p>
+            Title: @Html.TextBox("searchString")
+            <input class="btn btn-default" type="submit" value="Find" />
+        </p>
+
+        <p>
+            <a class="btn btn-success" href="/Posts/Create">Create New</a>
+        </p>
+    </div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Created)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a asp-action="Post" asp-route-id="@item.PostID">@Html.DisplayFor(modelItem => item.Title)</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

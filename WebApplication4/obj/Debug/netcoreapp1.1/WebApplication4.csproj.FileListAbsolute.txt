@@ -1,0 +1,10 @@
+c:\users\vital\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\bin\Debug\netcoreapp1.1\WebApplication4.deps.json
+c:\users\vital\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\bin\Debug\netcoreapp1.1\WebApplication4.runtimeconfig.json
+c:\users\vital\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\bin\Debug\netcoreapp1.1\WebApplication4.runtimeconfig.dev.json
+c:\users\vital\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\bin\Debug\netcoreapp1.1\WebApplication4.dll
+c:\users\vital\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\bin\Debug\netcoreapp1.1\WebApplication4.pdb
+c:\users\vital\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\netcoreapp1.1\WebApplication4.csprojResolveAssemblyReference.cache
+c:\users\vital\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+c:\users\vital\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\netcoreapp1.1\WebApplication4.AssemblyInfo.cs
+c:\users\vital\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\netcoreapp1.1\WebApplication4.dll
+c:\users\vital\documents\visual studio 2017\Projects\WebApplication4\WebApplication4\obj\Debug\netcoreapp1.1\WebApplication4.pdb
